@@ -49,7 +49,7 @@ TCNDDF.handleDrop = function (evt) {
 var dt = evt.dataTransfer,
 files = dt.files || false,
 count = files.length,
-acceptedFileExtensions = /^.*\.(ttf|otf|woff|woff2)$/i;
+acceptedFileExtensions = /^.*\.(|otf|woff|woff2|eot)$/i;
 
 
 TCNDDF.preventActions(evt);
@@ -70,7 +70,7 @@ document.title = droppedFileName;
 
 TCNDDF.processData(file,droppedFileName,droppedFileSize);
 } else {
-alert("Invalid file extension. Will only accept ttf, otf, woff or woff2 font files");
+alert("Invalid file extension. Will only accept ttf, otf, eot, woff or woff2 font files");
 }
 }
 };
